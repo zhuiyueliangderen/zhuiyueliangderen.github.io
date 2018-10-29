@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+    <title>new entries</title>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    <style type="text/css">
+        #container{
+        width:autom;
+        min-width: 1512px;
+        height:autom;
+        min-height: 800px;
+        overflow: scroll;
+        
+        }
+        #header{
+          width:1512px;
+          height:50px; 
+          background: black;
+          margin: o;
+          padding: 0;
+        }
+        #header1{
+          width:100px;
+          height:30px; 
+          background:floralwhite;
+          margin:10px;
+          position: absolute;
+          top:10px;right:300px;
+        }
+        #left{
+          width:227px;
+          height:autom;
+          min-height:1719.2px;
+          background:gray;
+          position: absolute;
+          top:58px;
+          margin:0px;
+        }
+        #middle{
+          width:1039px;
+          left:237px;
+          height:autom;
+          min-height:800px;
+          background: green;
+          position: absolute;
+          top:58px;
+          border-left-style: solid;
+          border-left-width: 3px;
+          border-left-color: black;
+          border-right-style: solid;
+          border-right-width: 3px;
+          border-right-color: black;
+        }
+        #right{
+          width:220px;
+          height:autom;
+          min-height:1719.2px;
+          background:gray;
+          position: absolute;
+          left:1285px;
+          top:58px;
+        }
+        #scrollPics{
+          width:1039px;
+          height:300px;
+          left:237px;
+          background: yellow;
+        }
+        .article{
+          width:930px;
+          height:300px;
+          margin-left:60px;
+          margin-top:20px;
+          background: gray;
+          border-style:solid;
+          border-color:dodgerblue;
+          display: flex;
+          
+        }
+        #paragraph{
+          display: flex;
+          margin-left:48px;
+        }
+        .diary{
+          height:300px;
+          width:305px;
+          margin-top:20px;
+          background:pink;
+          margin-left:8px;
+          border-style:solid;
+          border-color:gray;
+         
+        }
+        #footer{
+          width:1039px;
+          height:100px;
+          background: black;
+          margin-top:20px;
+        }
+        .picture{
+          width:465px;
+          height:300px;
+          background:rebeccapurple;
+          border-right-style: solid;
+          border-right-color: black;
+        }
+        .content{
+          width:465px;
+          height:300px;
+          background:chartreuse;
+          position:absolute;
+          margin-left:468px;
+        }
+        .photo{
+          width:305px;
+          height:125px;
+          background:crimson;
+          border-bottom-style: solid;
+          border-bottom-color: black;
+        }
+        .tractate{
+          width:305px;
+          height:175px;
+          background:olivedrab;
+          
+        }
+    </style>
+        <div id="container">
+            <div id="header">
+                <div id="header1"></div>
+            <div id="left"></div>
+            <div id="middle">
+                <div id="scrollPics">轮播图</div>
+                <div class="article">
+                    <div class="picture"></div>
+                    <div class="content">
+                        <a href="2018-10-25-diary.html">制作初学者轮播图需要JavaScript哪些知识？</a>
+                        <p><div style="text-align: right;
+                            margin-right:15px;"
+                            >2018-10-25</div></p>
+                        <p id="introduction">重点掌握循环函数和js基础知识</p>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="picture"></div>
+                    <div class="content">
+                        <a href="2018-10-26-diary.html">制作轮播图的基本思路</a>
+                        <p><div style="text-align: right;
+                            margin-right:15px;"
+                            >2018-10-26</div></p>
+                        <p id="introduction">
+                            <p>一、获取所需按钮元素;</p>
+                            <p>二、发生一次点击事件；</p>
+                            <p>三、需要定义一个变量保存下标；</p>
+                            <p>四、给下一张图片一个类名；</p>
+                            <p>五、给下一个tab一个类名</p>
+                        </p>
+                    </div>
+                </div>
+                <div class="article">
+                        <div class="picture"></div>
+                        <div class="content">
+                            <a href="2018-10-27-diary.html">学习前端开发需要看哪些书？</a>
+                            <p><div style="text-align: right;
+                                margin-right:15px;"
+                                >2018-10-27</div></p>
+                            <p id="introduction">
+                                <p>1. Web前端开发最佳实践</p>
+                                <p>2. 编写可维护的Javascript</p>
+                                <p>3. 锋利的jQuery</p>
+                                <p>4. 图解HTTP</p>
+                                <p>5. Javascript设计模式与开发实践</p>
+                            </p>
+                        </div>
+                </div>
+                <div id="paragraph">
+                    <div class="diary">
+                        <div class="photo"></div>
+                        <div class="tractate">
+                            <a href="2018-10-28-diary.html">制作轮播图没有成功的原因——细节</a>
+                            <p><div style="text-align: right;
+                                margin-right:15px;"
+                                >2018-10-28</div></p>
+                            <p id="introduction">如何定位到图片的位置，如何改变图片的className,如何发生click事件，发生click事件后图片该如何显示等</p>
+                        </div>
+                    </div>
+                    <div class="diary">
+                        <div class="photo"></div>
+                        <div class="tractate"></div>
+                    </div>
+                    <div class="diary">
+                        <div class="photo"></div>
+                        <div class="tractate"></div>
+                    </div>
+                </div>
+                <div id="footer"></div>
+            </div>
+            <div id="right"></div>
+        </div>
+    </body>
+</html>
