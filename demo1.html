@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <style>
+        .banner{
+            width:800px;
+            height:200px;
+            margin:0 auto;
+            position:relative;
+        }
+        .ban-image{
+            width:100%;
+            height:100%;
+            position:absolute;
+        }
+        .ban-image img{
+            width:100%;
+            height:100%;
+            opacity: 0;
+            position:absolute;
+            transition: 1s;
+        }
+        .ban-image img.on{
+            opacity: 1;
+        }
+        .btn-left,.btn-right{
+            line-height:60px;
+            width:50px;
+            position:absolute;
+            top:50%;
+            margin-top:-30px;
+            cursor: pointer;
+            font-size:20px;
+            text-align:center;
+            color:aqua;
+        }
+        .btn-left{
+            left: 0;
+        }
+        .btn-right{
+            right:0;
+        }
+        .tab{
+            position: absolute;
+            bottom: 10px;
+            left:50%;
+            transform: translateX(-50%);  
+        }
+        .tab li{
+            float:left;
+            list-style:none;
+            width:15px;
+            height:15px;
+            margin-right:8px;
+            border-radius:50%;
+            background-color:blue;
+        }
+        .tab li.on{
+            background: yellow;
+        }
+        </style>
+        <div class="banner">
+                <div class="ban-image">
+                    <img class="on" src="scenery1.jpg" alt=""/>
+                    <img src="scenery2.jpg" alt=""/>
+                    <img src="scenery3.jpg" alt=""/>
+                    <img src="cat1.gif" alt=""/>
+                    <img src="fish1.gif" alt=""/>
+                    <img src="flower1.gif" alt=""/>
+                </div>
+                <div class="btn">
+                    <div class="btn-left">&lt</div>
+                    <div class="btn-right">&gt</div>
+                </div>
+                <div class="tab">
+                    <ul>
+                        <li class="on"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+        </div>
+        <script type="text/javascript">
+                var oRight = document.querySelector(".btn-right");
+                var oLeft = document.querySelector(".btn-left");
+                var aImages = document.querySelectorAll(".ban-image img");
+                var aTabs =document.querySelectorAll(".tab li");
+                var lastindex = 0;
+                var index = 0; 
+                oRight.onclick = function() {
+                    changeImage(true);
+                };
+                oLeft.onclick = function() {
+                    changeImage(false);
+                };
+                function changeImage(direction) {
+                    aImages[lastindex].className = " ";
+                    aTabs[lastindex].className = " ";
+                    if (direction) {
+                        index++;
+                        if (index >= aImages.length) index=0;
+                    }else{
+                        index--;
+                        if (index < 0) index=aImages.length-1;
+                    }
+                    aImages[index].className = "on";
+                    aTabs[index].className = "on";
+                    lastindex = index;
+                    console.log(aImages);
+                }
+        </script>            
+    </body>
+</html>
